@@ -94,10 +94,10 @@ function App() {
               className="flex justify-between space-x-3 items-center  rounded"
             >
               <select
-                className={`p-3 rounded border ${
+                className={`p-3  border ${
                   isDarkMode
                     ? "border-gray-600 dark:bg-gray-800 dark:text-white"
-                    : "border-gray-300"
+                    : "border-gray-300 rounded"
                 }`}
                 value={subject.grade}
                 onChange={(e) =>
@@ -115,10 +115,10 @@ function App() {
                 <option value="F">F</option>
               </select>
               <select
-                className={`p-3 rounded border ${
+                className={`p-3  border ${
                   isDarkMode
                     ? "border-gray-600 dark:bg-gray-800 dark:text-white"
-                    : "border-gray-300"
+                    : "border-gray-300 rounded"
                 }`}
                 value={subject.credit}
                 onChange={(e) =>
@@ -146,7 +146,7 @@ function App() {
             className="flex border rounded-full p-2.5 items-center space-x-2 text-left font-medium"
             onClick={handleAddSubject}
           >
-            <FaPlus onClick={handleAddSubject} color={`${isDarkMode?'white':'neutral'}`}/>
+            <FaPlus onClick={handleAddSubject} color={`${isDarkMode?'white':'black'}`}/>
           </button>
         </div>
         <div className="my-4 md:w-1/2 w-full md:px-0 px-10 flex justify-center">
@@ -170,17 +170,24 @@ function App() {
       </div>
       <div className="absolute top-0 right-0 m-5 cursor-pointer">
         {isDarkMode ? (
+          <div className="flex space-x-2 items-center">
+          <span className={`text-${isDarkMode?'white':'black'}`}>Light</span>
           <FiSun
             onClick={toggleDarkMode}
-            className="text-yellow-400"
-            size={30}
+            className="text-white"
+            size={20}
           />
+          </div>
+          
         ) : (
+          <div className="flex space-x-2 items-center">
+          <span className={`text-${isDarkMode?'white':'black'}`}>Dark</span>
           <FiMoon
             onClick={toggleDarkMode}
             className="text-gray-600"
-            size={30}
-          />
+            size={20}
+          /> 
+          </div>
         )}
       </div>
     </div>
