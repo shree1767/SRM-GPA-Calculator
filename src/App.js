@@ -7,7 +7,7 @@ import "./App.css";
 function App() {
   const [subjects, setSubjects] = useState([{ grade: "", credit: "" }]);
   const [sgpa, setSgpa] = useState(null);
-  const [isDarkMode, setIsDarkMode] = useState(false); // State for tracking dark mode
+  const [isDarkMode, setIsDarkMode] = useState(true); // State for tracking dark mode
 
   const handleInputChange = (index, field, value) => {
     const updatedSubjects = [...subjects];
@@ -75,11 +75,13 @@ function App() {
   };
 
   return (
-    <>
+    <div  className={`App ${
+          isDarkMode ? "bg-gray-800" : "bg-white"
+        }  md:py-0 py-20  text-gray-900 md:h-screen`}>
       <div
         className={`App ${
           isDarkMode ? "bg-gray-800" : "bg-white"
-        } flex md:flex-row flex-col items-center justify-center text-gray-900 h-screen`}
+        } flex md:flex-row flex-col items-center justify-center text-gray-900 md:h-screen`}
       >
         <div className="md:hidden block flex flex-col justify-start items-center md:space-y-20 md:mb-0 mb-10">
           <h1
@@ -203,7 +205,7 @@ function App() {
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
