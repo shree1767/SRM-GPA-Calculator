@@ -77,7 +77,7 @@ function App() {
   return (
     <div  className={`App ${
           isDarkMode ? "bg-gray-800" : "bg-white"
-        }  md:py-0 py-20  text-gray-900 md:h-screen`}>
+        }  md:py-0 py-20  text-gray-900 h-screen`}>
       <div
         className={`App ${
           isDarkMode ? "bg-gray-800" : "bg-white"
