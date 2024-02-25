@@ -141,7 +141,7 @@ function App() {
             </div>
           ))}
         </div>
-        <div className="flex md:w-1/2 justify-end md:pr-0 pr-7 my-5">
+        <div className="flex md:w-1/2 justify-end md:pr-1 pr-7 my-5">
           <button
             className="flex border rounded-full p-2 items-center space-x-2 text-left font-medium"
             onClick={handleAddSubject}
