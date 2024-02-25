@@ -83,15 +83,15 @@ function App() {
             isDarkMode ? "text-white" : "text-black"
           }`}
         >
-          {sgpa !== null ? `SGPA ${sgpa}` : "SGPA  0.00"}
+          {sgpa !== null ? `Your Score ${sgpa}` : "Your Score  0.00"}
         </h1>
       </div>
       <div className={`flex flex-col md:w-1/2 w-full justify-center`}>
-        <div className="flex flex-col md:w-1/2 w-full space-y-5 justify-center items-center pb-5">
+        <div className="flex flex-col md:w-1/2  space-y-5 justify-center items-center pb-5">
           {subjects.map((subject, index) => (
             <div
               key={index}
-              className="flex justify-between space-x-3 items-center  rounded"
+              className="flex justify-between md:space-x-3 space-x-1 items-center  rounded"
             >
               <select
                 className={`p-3  border ${
@@ -141,12 +141,12 @@ function App() {
             </div>
           ))}
         </div>
-        <div className="flex w-1/2 justify-end my-5">
+        <div className="flex md:w-1/2 justify-end md:pr-0 pr-7 my-5">
           <button
-            className="flex border rounded-full p-2.5 items-center space-x-2 text-left font-medium"
+            className="flex border rounded-full p-2 items-center space-x-2 text-left font-medium"
             onClick={handleAddSubject}
           >
-            <FaPlus onClick={handleAddSubject} color={`${isDarkMode?'white':'black'}`}/>
+            <FaPlus onClick={handleAddSubject} color={`${isDarkMode?'white':'black'}`} size={10}/>
           </button>
         </div>
         <div className="my-4 md:w-1/2 w-full md:px-0 px-10 flex justify-center">
