@@ -73,13 +73,10 @@ function App() {
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
-
+  
   return (
-    <div
-      className={`App bg-${
-        isDarkMode ? "gray-800" : "white"
-      } flex md:flex-row flex-col items-center justify-center text-gray-900 h-screen`}
-    >
+<div className={`App ${isDarkMode ? "bg-gray-800" : "bg-white"} flex md:flex-row flex-col items-center justify-center text-gray-900 h-screen`}>
+
       <div className="md:hidden block flex flex-col justify-start items-center md:space-y-20 md:mb-0 mb-10">
         <h1
           className={`text-3xl font-bold flex justify-center ${
