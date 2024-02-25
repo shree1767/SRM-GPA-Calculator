@@ -165,7 +165,7 @@ function App() {
             isDarkMode ? "text-white" : "text-black"
           }`}
         >
-          {sgpa !== null ? `SGPA ${sgpa}` : "SGPA  0.00"}
+          {sgpa !== null ? `Your Score ${sgpa}` : "Your Score  0.00"}
         </h1>
       </div>
       <div className="absolute top-0 right-0 m-5 cursor-pointer">
